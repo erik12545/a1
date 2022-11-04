@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+	<style>
+		body{
+			background-color:aliceblue;
+		}
+		#pastilleRouge{
+			height:50px;
+			width:50px;
+			background-color:red;
+			border-radius:50px;
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+		#pastilleVerte{
+			height:50px;
+			width:50px;
+			background-color:#03CA31;
+			border-radius:50px;
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+		#pastilleOrange{
+			height:50px;
+			width:50px;
+			background-color:orange;
+			border-radius:50px;
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+		.alertLogo{
+			width:20px;
+			animation: clignotement 1s infinite linear;
+		}
+		.check{
+			width:20px;
+			border-radius:10px;
+			transition: 0.3s ease;
+		}
+		.check:hover{
+			background-color:#3cec3c;
+			/* box-shadow: 5px 3px 3px #026202; */
+		}
+		.sablier{
+			width:18px;
+		}
+		.sablier:hover{
+			animation: rotation 2s infinite linear;
+		}
+		.laBarre{
+			animation: barre 0.5s linear;
+		}
+		@keyframes rotation {
+  			from {
+    			transform: rotate(0deg);
+  			}
+  			to {
+    			transform: rotate(359deg);
+  			}
+		}
+		@keyframes barre {
+  			from {
+  				width: 0%;
+  			}
+
+		}
+		@keyframes clignotement {
+  			from {
+    			background-color:yellow;
+  			}
+  			to {
+    			background-color:white;
+  			}
+		}
+
+
+
+	</style>
+
+
+  </head>
+  <body>
+
+
+	  
+	<nav class="navbar navbar-expand-lg bg-light ">
+	  <div class="container-fluid">
+		<a class="navbar-brand" href="#">Accueil</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+		  <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="#">Les Projets</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Les Utilisateurs</a>
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				Profil
+			  </a>
+			  <ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Profile</a></li>
+				<li><a class="dropdown-item" href="#">Chnager de mots de passe</a></li>
+				<li><hr class="dropdown-divider"></li>
+				<li><a class="dropdown-item" href="#">Se Déconnecter</a></li>
+			  </ul>
+			</li>
+
+		</div>
+	  </div>
+	</nav>
+
+<br><br>
+	  
+	<div class="container">
+		<h2 class="text-center fw-lighter">Les Projets</h2><br><br>
+		<div class="shadow-lg alert alert-danger alert-dismissible fade show" role="alert">
+			<strong>Alerte !!</strong> Il y a un probleme au niveau du projet 56
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+		</div>
+	</div>
+
+	
+	<div class="container">
+		<br>
+		<div class="shadow-lg p-3 mb-5 bg-body rounded">
+			<div class="accordion accordion-flush" id="accordionFlushExample">
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingOne">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 1</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleVerte"></div>
+
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleRouge"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+			  <div class="accordion-body">
+			  	<div class="progress">
+					<div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			  	<div class="row" style="margin-top:10px">
+					<div class="col-4">
+						<p class="text-center">Expression initiale du Besoin</p>				
+					</div>			  	
+		  			<div class="col-4">
+		  				<p class="text-center">Bon de commande</p>					
+					</div>
+					<div class="col-4">
+						<p class="text-center">Mise en Production</p>				
+					</div>
+			  	</div>
+			  	
+				<br>
+			  
+			  </div>
+			</div>
+		  </div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingTwo">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 2</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleVerte"></div>
+
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleOrange"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleOrange"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+			  <div class="accordion-body border border-2">
+			  	<div class="progress">
+					<div class="progress-bar bg-danger" role="progressbar" aria-label="Success example" style="width: 30%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			  	<div class="row" style="margin-top:10px">
+					<div class="col-4">
+						<p class="text-left">Expression initiale du Besoin</p>				
+					</div>			  	
+		  			<div class="col-4">
+		  				<p class="text-center">Bon de commande</p>					
+					</div>
+					<div class="col-4">
+						<p class="text-end">Mise en Production</p>				
+					</div>
+			  	</div>
+			  	
+				<br>
+				
+			  </div>
+			</div>
+		  </div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingThree">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseFour">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 3</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleRouge"></div>
+
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleVerte"></div>
+						</div>
+					</div>
+			</h2>
+			<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+			<div class="accordion-body">
+			  	<div class="shadow-none p-3 mb-5 bg-light rounded">
+						<h5><u>Maintien en Condition Opérationnelle N°65454653</u> </h5> 
+						<p style="margin-bottom: 1px">Total de Jours accordés : 30 | Total de Jours consomés : 15 (50%)</p>
+						<div class="progress" style="height:5px;">
+  							<div class="progress-bar laBarre" role="progressbar" aria-label="Basic example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°30236845</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>--</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+				  <div class="progress" style="width:90%">
+						<div class="progress-bar bg-danger laBarre" style="width: 0%" role="progressbar" aria-label="Success example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+					</td>
+				  <td>En attente du Bon de Commande</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : --</p></div>	
+				<div class="col-4">Consommé : --</div>	
+				<div class="col-4">Surplus : --</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-danger" role="progressbar" aria-label="Basic example" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+				
+			  </div>
+			</div>
+		  </div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingThree">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 4</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleRouge"></div>
+
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleOrange"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+			<div class="accordion-body">
+			  	<div class="shadow-none p-3 mb-5 bg-light rounded">
+						<h5><u>Maintien en Condition Opérationnelle N°65454860</u> </h5> 
+						<p style="margin-bottom: 1px">Total de Jours accordés : 9 | Total de Jours consomés : 8 (88%)</p>
+						<div class="progress" style="height:5px;">
+  							<div class="progress-bar bg-danger laBarre" role="progressbar" aria-label="Basic example" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°32021005</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="check.png" class="check"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+				  <div class="progress" style="width:90%">
+						<div class="progress-bar bg-danger laBarre" style="width: 80%" role="progressbar" aria-label="Success example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">15 jours restant</div>
+					</div>
+					</td>
+				  <td>14/05/2023 (15 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 57 Jours</div>	
+				<div class="col-4">Surplus : 12 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-danger laBarre" role="progressbar" aria-label="Basic example" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°69456985</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td>14/05/2023 (85 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 1 Jours</div>	
+				<div class="col-4">Surplus : 0 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+				
+			  </div>
+			</div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingFive">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 5</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleRouge"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleOrange"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+			  	
+					<div class="shadow-none p-3 mb-5 bg-light rounded">
+						<h5><u>Maintien en Condition Opérationnelle N°65454653</u> </h5> 
+						<p style="margin-bottom: 1px">Total de Jours accordés : 26 | Total de Jours consomés : 32 (123%) <img src="alert.png" class="alertLogo"/></p>
+						<div class="progress" style="height:5px;">
+  							<div class="progress-bar bg-danger laBarre" role="progressbar" aria-label="Basic example" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°63202985</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td>14/05/2023 (85 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 1 Jours</div>	
+				<div class="col-4">Surplus : 0 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+				</div>
+			  </div>
+			</div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingSix">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 6</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleRouge"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleOrange"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+			  	
+					<div class="shadow-none p-3 mb-5 bg-light rounded">
+						<h5><u>Maintien en Condition Opérationnelle N°65454653</u> </h5> 
+						<p style="margin-bottom: 1px">Total de Jours accordés : 30 | Total de Jours consomés : 15 (50%)</p>
+						<div class="progress" style="height:5px;">
+  							<div class="progress-bar laBarre" role="progressbar" aria-label="Basic example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°20125489</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td>14/05/2023 (85 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 1 Jours</div>	
+				<div class="col-4">Surplus : 0 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+				</div>
+			  </div>
+			</div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingSeven">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 7</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleRouge"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleOrange"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+			  	
+					<div class="shadow-none p-3 mb-5 bg-light rounded">
+						<h5><u>Maintien en Condition Opérationnelle N°65454653</u> </h5> 
+						<p style="margin-bottom: 1px">Total de Jours accordés : 30 | Total de Jours consomés : 15 (50%)</p>
+						<div class="progress" style="height:5px;">
+  							<div class="progress-bar laBarre" role="progressbar" aria-label="Basic example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°31510258</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td>14/05/2023 (85 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 1 Jours</div>	
+				<div class="col-4">Surplus : 0 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°98563214</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td>14/05/2023 (85 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 1 Jours</div>	
+				<div class="col-4">Surplus : 0 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°98547652</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td> -- </td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td> -- </td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td> -- </td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : -- jours</p></div>	
+				<div class="col-4">Consommé : -- Jours</div>	
+				<div class="col-4">Surplus : -- jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+
+
+				</div>
+			  </div>
+			</div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingEight">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 8</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleOrange"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleVerte"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+			  	
+					<div class="shadow-none p-3 mb-5 bg-light rounded">
+						<h5><u>Maintien en Condition Opérationnelle N°98535415</u> </h5> 
+						<p style="margin-bottom: 1px">Total de Jours accordés : 30 | Total de Jours consomés : 15 (50%)</p>
+						<div class="progress" style="height:5px;">
+  							<div class="progress-bar laBarre" role="progressbar" aria-label="Basic example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°6875543</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td>14/05/2023 (85 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 1 Jours</div>	
+				<div class="col-4">Surplus : 0 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°698546520</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td>14/05/2023 (85 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 1 Jours</div>	
+				<div class="col-4">Surplus : 0 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°63257841</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td> -- </td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td> -- </td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td> -- </td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : -- jours</p></div>	
+				<div class="col-4">Consommé : -- Jours</div>	
+				<div class="col-4">Surplus : -- jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+
+
+				</div>
+			  </div>
+			</div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingNine">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 9</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleOrange"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+			  	
+					<div class="shadow-none p-3 mb-5 bg-light rounded">
+						<h5><u>Maintien en Condition Opérationnelle N°65454653</u> </h5> 
+						<p style="margin-bottom: 1px">Total de Jours accordés : 30 | Total de Jours consomés : 15 (50%)</p>
+						<div class="progress" style="height:5px;">
+  							<div class="progress-bar laBarre" role="progressbar" aria-label="Basic example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+
+	<div class="shadow-none p-3 mb-5 bg-light rounded">
+		<h5><U>Evolution N°10236959</U></h5>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  <td><b>Expression initiale du Besoin</b></td>
+				  <td>Validé <img src="check.png" class="check"/></td>
+				  <td>12/12/2022</td>
+				</tr>
+				<tr>
+				  <td><b>Bon de commande</b></td>
+				  <td>(en cours) <img src="sablier.png" class="sablier"/></td>
+				  <td>26/02/2023</td>
+				</tr>
+				<tr>
+				  <td><b>Mise en Production</b></td>
+				  <td>
+					<div class="progress" style="width:90%;">
+						<div class="progress-bar bg-success laBarre" role="progressbar" aria-label="Success example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+
+					</td>
+				  <td>14/05/2023 (85 jours restant)</td>
+				</tr>
+			  </tbody>
+			</table>
+		<div style="background-color:white; padding:10px">
+			<div class="row text-center">
+				<div class="col-4"><p>Ressource estimé : 45 jours</p></div>	
+				<div class="col-4">Consommé : 1 Jours</div>	
+				<div class="col-4">Surplus : 0 jours</div>	
+			</div>
+
+			<p>Progression :</p>
+			<div class="progress">
+				<div class="progress-bar  bg-success laBarre" role="progressbar" aria-label="Basic example" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+		</div>
+	</div>
+
+
+
+				</div>
+			  </div>
+			</div>
+				<div class="accordion-item">
+			<h2 class="accordion-header" id="flush-headingTen">
+			  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+				<div style="width:100%">
+					<div class="row">
+						<div class="col-sm-3">
+							<h3>Projet test 10</h3>
+							<p>Nom Chef de projet</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Alerte: Mise en production</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Bug non résolus</p>
+							<div id="pastilleVerte"></div>
+						</div>
+						<div class="col-sm-3">
+							<p>Etat: Fonctionnel  </p>
+							<div id="pastilleOrange"></div>
+						</div>
+					</div>		
+				
+				</div>
+			  </button>
+			</h2>
+			<div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">
+			  	
+					<div class="shadow-none p-3 mb-5 bg-light rounded">
+						<h5><u>Maintien en Condition Opérationnelle N°98745684</u> </h5> 
+						<p style="margin-bottom: 1px">Total de Jours accordés : 30 | Total de Jours consomés : 15 (50%)</p>
+						<div class="progress" style="height:5px;">
+  							<div class="progress-bar laBarre" role="progressbar" aria-label="Basic example" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

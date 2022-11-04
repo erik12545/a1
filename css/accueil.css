@@ -1,0 +1,72 @@
+body{
+    background-color:aliceblue;
+}
+.leTitre{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#pastilleRouge{
+    height:50px;
+    width:50px;
+    background-color:red;
+    border-radius:50px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#pastilleVerte{
+    height:50px;
+    width:50px;
+    background-color:#03CA31;
+    border-radius:50px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#pastilleOrange{
+    height:50px;
+    width:50px;
+    background-color:orange;
+    border-radius:50px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.alertLogo{
+    width:20px;
+    animation: clignotement 1s infinite linear;
+}
+.check{
+    width:20px;
+    border-radius:10px;
+    transition: 0.3s ease;
+}
+.check:hover{
+    background-color:#3cec3c;
+    /* box-shadow: 5px 3px 3px #026202; */
+}
+.sablier{
+    width:18px;
+}
+.sablier:hover{
+    animation: rotation 2s infinite linear;
+}
+.laBarre{
+    animation: barre 0.5s linear;
+}
+@keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+}
+@keyframes barre {
+      from {
+          width: 0%;
+      }
+
+}
+@keyframes clignotement {
+      from {
+        background-color:yellow;
+      }
+      to {
+        background-color:white;
+      }
+}

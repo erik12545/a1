@@ -1,0 +1,14 @@
+----------------------- Exemple de possibilité -----------------------
+
+[02-11-2022 : 14:40:28] :: acces projet retirer => projet 41 : changed by => alex to thomas
+[02-11-2022 : 15:22:12] :: acces projet ajouter => projet 95 : changed by => alex to thomas
+[02-11-2022 : 16:20:53] :: user creation => fabien : created by => alex
+[02-11-2022 : 16:25:42] :: user delete => fabien : deleted by => alex
+[02-11-2022 : 16:29:35] :: password reset => thomas : changed by => alex
+[02-11-2022 : 16:47:17] :: password changed => thomas : changed by => thomas
+
+----------------------------------///----------------------------------
+
+[03.11.2022 : 10:12:08 ::1] :: acces projet retirer => Projet 56 : changed by Marie Luc to thomas
+[03.11.2022 : 10:14:56 ::1] :: user creation => Marie Luc : created by thomas
+[03.11.2022 : 10:16:12 ::1] :: erreur dans le code
